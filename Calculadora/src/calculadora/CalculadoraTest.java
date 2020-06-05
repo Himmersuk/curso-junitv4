@@ -2,22 +2,39 @@ package calculadora;
 
 import static org.junit.Assert.*;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 public class CalculadoraTest {
 
-	@Test
-	public void testSuma() {
-		int resultado = Calculadora.suma(2, 3);
-		int esperado = 5;
-		assertEquals(esperado, resultado);
+	Calculadora calc;
+	
+	@Before
+	public void before() {
+		System.out.println("Before");
+		calc = new Calculadora();
+	}
+	
+	@After
+	public void after() {
+		System.out.println("after");
+		calc.clear();
 	}
 	
 	@Test
-	public void testResta() {
-		int resultado = Calculadora.resta(3, 2);
-		int esperado = 1;
-		assertEquals(esperado, resultado);
+	public void testSum() {
+		System.out.println("testSum()");
+		int result = calc.add(3,2);
+		assertEquals(5, result);
+	}
+	
+	@Test
+	public void testAnsSum() {
+		System.out.println("testAnsSum()");
+		calc.add(3,2);
+		int result = calc.ans();
+		assertEquals(5, result);
 	}
 	
 }
