@@ -37,4 +37,18 @@ public class CalculadoraTest {
 		assertEquals(5, result);
 	}
 	
+	@Test
+	public void testDiv() {
+		calc.div(5, 2);
+	}
+	
+	@Test(expected = ArithmeticException.class)
+	public void testDiv2() {
+		calc.div(5, 0);
+	}
+	
+	@Test(timeout = 100)
+	public void testAlgoritmoOptimo() {
+		calc.operacionOptima();
+	}
 }

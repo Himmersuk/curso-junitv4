@@ -17,6 +17,10 @@ public class Calculadora {
 		return ans;
 	}
 	
+	public int div(int a , int b) {
+		ans = a / b;
+		return ans;
+	}
 	public int add (int v) {
 		ans += v;
 		return ans;
@@ -33,5 +37,16 @@ public class Calculadora {
 	
 	public void clear() {
 		ans = 0 ;
+	}
+	
+	public void operacionOptima() {
+		
+		for(;;);
+//		try {
+//			Thread.sleep(2000);
+//		} catch (InterruptedException e) {
+//			// TODO Auto-generated catch block
+//			//e.printStackTrace();
+//		}
 	}
 }
